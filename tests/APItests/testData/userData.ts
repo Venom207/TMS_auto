@@ -9,7 +9,6 @@ export function createRandomUser() {
     password: faker.internet.password(),
     birthdate: faker.date.birthdate(),
     registeredAt: faker.date.past(),
-    //job: faker.internet.job(),
   };
 }
 
