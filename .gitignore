@@ -1,3 +1,10 @@
 node_modules/*
 package-lock.json/*
 lcov-report/*
+coverage/lcov-report/consts/consts.ts.html
+coverage/lcov-report/consts/index.html
+coverage/lcov-report/src/calculator.ts.html
+coverage/lcov-report/src/index.html
+coverage/lcov-report/tests/APItests/testData/index.html
+coverage/lcov-report/tests/APItests/testData/param.ts.html
+coverage/lcov-report/tests/APItests/testData/userData.ts.html
