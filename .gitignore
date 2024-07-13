@@ -1,3 +1,7 @@
-node_modules/*
-package-lock.json/*
-lcov-report/*
+node_modules
+package-lock.json
+lcov-report
+clover.xml
+calculator.ts.html
+index.html
+
