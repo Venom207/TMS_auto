@@ -1,8 +1,6 @@
 node_modules
-package-lock.json
-lcov-report
-*.xml
+package-lock.json/*
+lcov-report/*
 *.html
 *.css
-
-
+*.xml
