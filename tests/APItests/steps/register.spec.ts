@@ -1,8 +1,9 @@
 const request = require('supertest');
 import { expect } from 'chai';
-import { postRequest } from '../testData/param.ts';
-import { userRegister } from '../testData/userData.ts';
-import {BASE_URL_API} from "../../../consts/consts.ts";
+import { postRequest } from '../src/requestWrapers.ts';
+import { userRegister,userRegisterFail } from '../testData/userData.ts';
+import {BASE_URL_API, ENDPOINTS} from "../../../consts/consts.ts";
+import {checkingAndValidate} from "../src/utils.ts";
 
 
 describe("Проверка эндпойнта register", () => {
@@ -16,8 +17,6 @@ describe("Проверка эндпойнта register", () => {
     });
 
     it("Неудачная регистрация пользователя REGISTER - UNSUCCESSFUL", async () => {
-        const response = await postRequest(BASE_URL_API,`/register`).
-        send({ "email": "sydney@fife"});
-        expect(response.statusCode).to.be.equal(400);
+        checkingAndValidate(BASE_URL_API,ENDPOINTS.register);
     });
 });
