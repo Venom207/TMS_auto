@@ -1,3 +1,4 @@
+
 export class Methods {
     static sortNumberArray(array: number[], type = "asc" || "desc")
     {
@@ -7,4 +8,5 @@ export class Methods {
             })
             return array.sort();
     }
-}
+};
+
