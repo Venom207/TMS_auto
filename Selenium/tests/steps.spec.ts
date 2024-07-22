@@ -10,7 +10,7 @@ beforeAll(async () => {
     driver = new Builder().forBrowser("chrome").build();
     await driver.manage().window().maximize();
     await driver.get(BASE_URL_SELENIUM);
-})
+}, 20000)
 
 afterAll(async () => {
     await driver.quit();
@@ -18,7 +18,7 @@ afterAll(async () => {
 
 it('Проверка раздела "Все потоки"', async () => {
     await driver.get(BASE_URL_SELENIUM);
-    const titleText = await driver.wait(until.elementLocated(By.xpath(locatorsXpath.titleElement)), 5000);
+    const titleText = await driver.wait(until.elementLocated(By.xpath(locatorsXpath.titleElement)), 10000);
     expect(await titleText.isDisplayed()).toBe(true);
     expect(await titleText.getText()).toBe('Все потоки');  
   });

@@ -10,7 +10,7 @@ npm install
 
 2. Запустите тесты с помощью команды:
 
-npm test run:Selenium
+npm run test:Selenium
 
 
 ## Описание тестов
