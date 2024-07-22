@@ -36,4 +36,12 @@ export const userRegister = {
 export const userLogin = {
     "email": "eve.holt@reqres.in",
     "password": "cityslicka"
-}
+};
+
+export const userLoginFail = {
+    "email": "peter@klaven",
+};
+
+export const userRegisterFail = {
+    "email": "sydney@fife",
+};

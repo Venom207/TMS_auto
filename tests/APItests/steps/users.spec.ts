@@ -1,6 +1,6 @@
 const request = require('supertest');
 import { expect } from 'chai';
-import { getRequest, postRequest, putRequest, deleteRequest } from '../testData/param.ts';
+import { getRequest, postRequest, putRequest, deleteRequest } from '../src/requestWrapers.ts';
 import { user, userUpdate } from '../testData/userData.ts';
 import {BASE_URL_API} from "../../../consts/consts.ts";
 
@@ -19,7 +19,6 @@ describe("Проверка эндпойнта users", () => {
         const response = await getRequest(BASE_URL_API, `/users/2`);
     
         expect(response.statusCode).to.be.equal(200);
-        expect(response.body).to.be.a('object');
         expect(response.body.data).to.be.an('object'); 
         expect(response.body.data).to.have.property('id').and.to.be.a('number');
         expect(response.body.data).haveOwnProperty('email').and.to.be.a('string');
@@ -28,7 +27,6 @@ describe("Проверка эндпойнта users", () => {
 
     it("Проверка SINGLE USER NOT FOUND", async () => {
         const response = await getRequest(BASE_URL_API, `/users/23`);
-
         expect(response.statusCode).to.be.equal(404);
         expect(response.body).to.be.a('object').and.to.be.empty;
  });
