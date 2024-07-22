@@ -17,14 +17,12 @@ afterAll(async () => {
 });  
 
 it('Проверка раздела "Все потоки"', async () => {
-    await driver.get(BASE_URL_SELENIUM);
     const titleText = await driver.wait(until.elementLocated(By.xpath(locatorsXpath.titleElement)), 10000);
     expect(await titleText.isDisplayed()).toBe(true);
     expect(await titleText.getText()).toBe('Все потоки');  
   });
 
   it('Проверка наличия кнопки "Новости"', async () => {
-    await driver.get(BASE_URL_SELENIUM);
     const newsLink = await driver.findElement(By.xpath(locatorsXpath.newsLink));
     expect(await newsLink.isDisplayed()).toBe(true);
     expect(await newsLink.getText()).toContain('НОВОСТИ');
@@ -32,7 +30,6 @@ it('Проверка раздела "Все потоки"', async () => {
   });
 
   it('Проверка нажатия на выплывающий список и открытия разделов "Все сервисы Хабра"', async () => {
-    await driver.get(BASE_URL_SELENIUM);
     const dropDawnMenu = await driver.wait(until.elementIsEnabled(driver.findElement(By.css(locatorsCss.dropDawnMenu))), 10000);
     await dropDawnMenu.click();
     const allServices = await driver.findElement(By.xpath(locatorsXpath.allServices));
@@ -41,7 +38,6 @@ it('Проверка раздела "Все потоки"', async () => {
   });
 
   it('Проверка кнопки "Войти"', async () => {
-    await driver.get(BASE_URL_SELENIUM);
     const loginButton = await driver.findElement(By.linkText('Войти'));
     expect(await loginButton.isDisplayed()).toBe(true);
     expect(await loginButton.getText()).toBe('Войти');
