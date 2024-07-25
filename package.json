@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test:Play": "npx playwright test",
+    "test:ui":"npx playwright test --ui",
     "test:Selenium": "jest tests/Selenium/**/steps/*.spec.ts",
     "test:API": "jest tests/APItests/**/*.spec.ts",
     "test:calc": "jest tests/calcTest.spec.ts",
     "testJ": "jest --coverage",
     "testJest": "jest",
-    "testMocha": "mocha",
-    "test:allAPI": "jest steps/**/*.spec.ts",
-    "test:S": "jest tests/Selenium/tests/steps.spec.ts"
+    "testMocha": "mocha"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
+    "@playwright/test": "^1.45.3",
     "@types/express": "^4.17.21",
     "@types/jest": "^29.5.12",
     "@types/mocha": "^10.0.7",

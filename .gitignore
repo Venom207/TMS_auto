@@ -4,5 +4,9 @@ lcov-report
 *.xml
 *.html
 *.css
-
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+.vscode
 
