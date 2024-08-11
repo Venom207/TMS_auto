@@ -4,14 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:Play": "npx playwright test",
-    "test:ui":"npx playwright test --ui",
-    "test:Selenium": "jest tests/Selenium/**/steps/*.spec.ts",
-    "test:API": "jest tests/APItests/**/*.spec.ts",
-    "test:calc": "jest tests/calcTest.spec.ts",
-    "testJ": "jest --coverage",
-    "testJest": "jest",
-    "testMocha": "mocha"
+    "test:play": "npx playwright test tests/steps.spec.ts",
+    "test": "playwright test --reporter=allure-playwright",
+    "ui": "playwright test --ui",
+    "test:ui": "npx playwright test --ui tests/playwright",
+    "allure:open": "npx allure generate ../allure-results --clean && npx allure serve allure-results"
   },
   "repository": {
     "type": "git",
@@ -27,24 +24,17 @@
     "@types/chai": "^4.3.16",
     "@types/node": "^20.14.10",
     "@types/selenium-webdriver": "^4.1.24",
-    "@types/superagent": "^8.1.7",
     "chai": "^4.3.6",
     "chromedriver": "^126.0.4",
-    "jest": "^29.7.0",
-    "jsonschema": "^1.4.1",
     "library-name": "^1.1.0",
-    "selenium-webdriver": "^4.22.0",
-    "superagent": "^9.0.2",
-    "ts-jest": "^29.1.5",
     "typescript": "^5.5.3"
   },
   "devDependencies": {
-    "@faker-js/faker": "^8.4.1",
     "@playwright/test": "^1.45.3",
     "@types/express": "^4.17.21",
-    "@types/jest": "^29.5.12",
     "@types/mocha": "^10.0.7",
-    "@types/supertest": "^6.0.2",
-    "supertest": "^7.0.0"
+    "@wdio/allure-reporter": "^8.39.0",
+    "allure-commandline": "^2.29.0",
+    "allure-playwright": "^3.0.0-beta.7"
   }
 }

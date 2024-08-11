@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
-    "types": [ "@types/mocha","@types/node","@types/jest","@types/chai", "@types/superagent"],
+    "types": [ "@types/mocha","@types/node","@types/chai", "@types/superagent"],
     /* Projects */
     // "incremental": true,                              /* Save .tsbuildinfo files to allow for incremental compilation of projects. */
     // "composite": true,                                /* Enable constraints that allow a TypeScript project to be used with project references. */

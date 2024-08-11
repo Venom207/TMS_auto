@@ -2,7 +2,7 @@ import { Page } from "@playwright/test";
 import { NavigationBar } from "../elements/navigationBar";
 export class BasePage{
     protected url!:string
-    public navigationBar:NavigationBar
+    protected navigationBar:NavigationBar
     constructor(protected page:Page){
         this.navigationBar = new NavigationBar(page)
     }
